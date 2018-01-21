@@ -66,7 +66,7 @@ buy_exe <- function(x){
   while(curr_bal_eth() == 0){
     #order_size <- curr_bal_usd() / ask() - 0.009
     add_order(product_id = "ETH-USD", api.key = "key", secret = "secret", passphrase = "passphrase",
-              type="limit", price = bid(), side = "b",  size = z )
+              type="limit", price = bid(), side = "b",  size = order_size )
     # sleep to see if order takes
     Sys.sleep(17)
     # check to see if ETH bal >= order amt
